@@ -1,3 +1,5 @@
+using LP3.BlazorServer.Domain.Enums;
+
 namespace LP3.BlazorServer.Shared.DTOs;
 
 /// <summary>DTO para mostrar estudiantes en listados.</summary>
@@ -18,5 +20,5 @@ public class EstudianteFormDto
     public string Apellido  { get; set; } = string.Empty;
     public string Matricula { get; set; } = string.Empty;
     public string Email     { get; set; } = string.Empty;
-    public Domain.Enums.EstadoEstudiante Estado { get; set; } = Domain.Enums.EstadoEstudiante.Activo;
+    public EstadoEstudiante Estado { get; set; } = EstadoEstudiante.Activo;
 }

@@ -1,3 +1,5 @@
+using LP3.BlazorServer.Domain.Enums;
+
 namespace LP3.BlazorServer.Domain.Entities;
 
 public class Estudiante
@@ -13,7 +15,7 @@ public class Estudiante
     public DateTime FechaIngreso { get; set; }
 
     // ── Estado usando un Enum (lo veremos más adelante) ───
-    public Enums.EstadoEstudiante Estado { get; set; } = Enums.EstadoEstudiante.Activo;
+    public EstadoEstudiante Estado { get; set; } = EstadoEstudiante.Activo;
 
     // ── Auditoría ─────────────────────────────────────────
     public DateTime CreadoEn    { get; set; } = DateTime.UtcNow;
@@ -22,4 +24,3 @@ public class Estudiante
     // ── Navegación (relaciones) ───────────────────────────
     public ICollection<Matriculacion> Matriculaciones { get; set; } = new List<Matriculacion>();
 }
-
